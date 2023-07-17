@@ -1,7 +1,6 @@
 ﻿using Exception_Handling;
 using System;
 
-// Власний тип винятку для перевищення максимально допустимої швидкості
 public class SpeedLimitExceededException : Exception
 {
     public SpeedLimitExceededException() : base("Maximum speed reached!")
@@ -9,7 +8,6 @@ public class SpeedLimitExceededException : Exception
     }
 }
 
-// Власний тип винятку для спроби натиснути на газ, коли автомобіль рухається заднім ходом
 public class InvalidActionException : Exception
 {
     public InvalidActionException() : base("Invalid action: Cannot accelerate while moving in reverse.")
