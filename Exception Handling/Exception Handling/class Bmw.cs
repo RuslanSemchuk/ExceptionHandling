@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exception_Handling
 {
-    class Bmw : Car, ISeats, IRadio
+    class Bmw : Car, IRadio, ISeats
     {
         public override void Breke()
         {
@@ -23,78 +23,43 @@ namespace Exception_Handling
             }
             else
             {
-                throw new Exception("Bmw: Maximum speed reached!");
+                throw new SpeedLimitExceededException();
             }
-
-             void TurnOn()
-            {
-                Console.WriteLine("Bmw: Turning on the radio...");
-            }
-
-             void TurnOff()
-            {
-                Console.WriteLine("Bmw: Turning off the radio...");
-            }
-
-             void ChangeStation()
-            {
-                Console.WriteLine("Bmw: Changing the radio station...");
-            }
-
-             void IncreaseVolume()
-            {
-                Console.WriteLine("Bmw: Increasing the radio volume...");
-            }
-
-             void AdjustPosition()
-            {
-                Console.WriteLine("Bmw: Adjusting the seat position...");
-            }
-
-             void HeatOn()
-            {
-                Console.WriteLine("Bmw: Turning on the seat heating...");
-            }
-
-             void HeatOff()
-            {
-                Console.WriteLine("Bmw: Turning off the seat heating...");
-            }
-        }
-
-        public void AdjustPosition()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void HeatOff()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void HeatOn()
-        {
-            throw new NotImplementedException();
         }
 
         public void TurnOn()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Bmw: Turning on the radio...");
         }
 
         public void TurnOff()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Bmw: Turning off the radio...");
         }
 
         public void ChangeStation()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Bmw: Changing the radio station...");
         }
 
         public void IncreaseVolume()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Bmw: Increasing the radio volume...");
+        }
+
+        public void AdjustPosition()
+        {
+            Console.WriteLine("Bmw: Adjusting the seat position...");
+        }
+
+        public void HeatOn()
+        {
+            Console.WriteLine("Bmw: Turning on the seat heating...");
+        }
+
+        public void HeatOff()
+        {
+            Console.WriteLine("Bmw: Turning off the seat heating...");
         }
     }
 }

@@ -6,28 +6,26 @@ using System.Threading.Tasks;
 
 namespace Exception_Handling
 {
-    class Volga : Car, ISeats, IRadio
-    { 
-    public override void Breke()
+    class Volga : Car, IRadio, ISeats
     {
-        int speed = 0;
-        speed -= 5;
-        Console.WriteLine("Volga: Braking... Current speed: " + speed);
-    }
+        public override void Breke()
+        {
+            speed -= 5;
+            Console.WriteLine("Volga: Braking... Current speed: " + speed);
+        }
 
-    public override void Accelerate()
-    {
-        int speed = 0;
-        if (speed < 180)
+        public override void Accelerate()
         {
-            speed += 50;
-            Console.WriteLine("Volga: Accelerating... Current speed: " + speed);
+            if (speed < 180)
+            {
+                speed += 50;
+                Console.WriteLine("Volga: Accelerating... Current speed: " + speed);
+            }
+            else
+            {
+                throw new SpeedLimitExceededException();
+            }
         }
-        else
-        {
-            throw new Exception("Volga: Maximum speed reached!");
-        }
-    }
 
         public void TurnOn()
         {
@@ -63,6 +61,5 @@ namespace Exception_Handling
         {
             Console.WriteLine("Volga: Turning off the seat heating...");
         }
-        
     }
 }

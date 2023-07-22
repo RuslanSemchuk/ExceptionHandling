@@ -14,10 +14,8 @@ namespace Exception_Handling
         {
             return speed;
         }
+
         public abstract void Breke();
-
         public abstract void Accelerate();
-
-
     }
 }

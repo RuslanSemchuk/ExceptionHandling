@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Exception_Handling
 {
-    internal interface ISeats
+
+    interface ISeats
     {
         void AdjustPosition();
-        void HeatOff();
         void HeatOn();
+        void HeatOff();
     }
 }

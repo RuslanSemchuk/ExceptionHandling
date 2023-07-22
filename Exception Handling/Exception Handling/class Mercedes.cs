@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exception_Handling
 {
-    class Mercedes : Car, ISeats, IRadio
+    class Mercedes : Car, IRadio, ISeats
     {
         public override void Breke()
         {
@@ -23,44 +23,43 @@ namespace Exception_Handling
             }
             else
             {
-                throw new Exception("Mercedes: Maximum speed reached!");
+                throw new SpeedLimitExceededException();
             }
         }
-            public void TurnOn()
-            {
-                Console.WriteLine("Mercedes: Turning on the radio...");
-            }
 
-            public void TurnOff()
-            {
-                Console.WriteLine("Mercedes: Turning off the radio...");
-            }
+        public void TurnOn()
+        {
+            Console.WriteLine("Mercedes: Turning on the radio...");
+        }
 
-            public void ChangeStation()
-            {
-                Console.WriteLine("Mercedes: Changing the radio station...");
-            }
+        public void TurnOff()
+        {
+            Console.WriteLine("Mercedes: Turning off the radio...");
+        }
 
-            public void IncreaseVolume()
-            {
-                Console.WriteLine("Mercedes: Increasing the radio volume...");
-            }
+        public void ChangeStation()
+        {
+            Console.WriteLine("Mercedes: Changing the radio station...");
+        }
 
-            public void AdjustPosition()
-            {
-                Console.WriteLine("Mercedes: Adjusting the seat position...");
-            }
+        public void IncreaseVolume()
+        {
+            Console.WriteLine("Mercedes: Increasing the radio volume...");
+        }
 
-            public void HeatOn()
-            {
-                Console.WriteLine("Mercedes: Turning on the seat heating...");
-            }
+        public void AdjustPosition()
+        {
+            Console.WriteLine("Mercedes: Adjusting the seat position...");
+        }
 
-            public void HeatOff()
-            {
-                Console.WriteLine("Mercedes: Turning off the seat heating...");
-            }
+        public void HeatOn()
+        {
+            Console.WriteLine("Mercedes: Turning on the seat heating...");
+        }
+
+        public void HeatOff()
+        {
+            Console.WriteLine("Mercedes: Turning off the seat heating...");
+        }
     }
-}  
-
-
+}
